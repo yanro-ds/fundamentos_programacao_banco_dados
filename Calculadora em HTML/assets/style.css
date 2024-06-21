@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+
+/*configuração básicas, fazendo o reset da pagina
+sendo que a borda faça parte da pagina*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    body {
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+
+    section#login {
+        width: 80vw;
+        height: 280px;
+    }
+
+    section#login>div#imagem {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login>div#formulario {
+        float: right;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, #49a09d, #e63d0fdd);
+    }
+
+    section#login {
+        width: 950px;
+        height: 350px;
+
+    }
+
+    section#login>div#imagem {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login>div#formulario {
+        float: left;
+        width: 50%;
+    }
+
+    div#formulario>h1 {
+        font-size: 2.0em;
+        
+    }
+
+    div#formulario>p {
+        font-size: 1.2em;
+        margin: 10px 0px;
+    }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background-color: #4b4b4b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px; /* Definindo largura máxima para limitar em dispositivos maiores */
+  width: 100%; /* Faz com que ocupe toda a largura disponível */
+  margin: 20px; /* Margem para separação dos elementos externos */
+}
+
+.calculator input[type="text"] {
+  width: calc(100% - 30px); /* Ajuste para o tamanho do input */
+  height:calc(100% - 75px);
+  margin: 10px;
+  padding: 10px;
+  font-size: 75px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+.calculator .keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px; /* Espaço entre o display e os botões */
+}
+
+.calculator button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #818181;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Faz com que cada botão ocupe toda a largura disponível */
+}
+
+.calculator button.operator {
+  background-color: #ff9800; /* Cor de fundo diferente para os operadores */
+}
+
+.calculator button:hover {
+  background-color: #ccc;
+}
+
+/* Estilo específico para os botões de 'C' e '=' */
+#clear-button {
+  background-color: #f44336; /* Cor vermelha */
+}
+
+#equals-button {
+  background-color: #4caf50; /* Cor verde */
+} 
